@@ -1,0 +1,6 @@
+{
+	"name": "onPremToAzureRuntime",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
