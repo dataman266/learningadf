@@ -1,0 +1,15 @@
+{
+	"name": "salesoppr1",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "9875942a-fa98-4ec9-9c9e-07776685e803",
+		"tenantId": "6e595b24-83d6-481d-a32f-5535bad14805"
+	}
+}
