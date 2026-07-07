@@ -5,9 +5,9 @@
 		"annotations": [],
 		"type": "FileServer",
 		"typeProperties": {
-			"host": "192.168.31.113",
+			"host": "\\\\192.168.31.113",
 			"userId": "SIR\\adfuser",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI3ZmQwZjY3MC1iNjA5LTQwNjYtOTI0OC03MTk1NDUwZjc0MWYiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJjMDdmN2IwOS1mMzQ5LTQyODItYmFiYy0yYTkzZDg1ZGUwODkiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "onPremToAzureRuntime",
