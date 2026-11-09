@@ -15,7 +15,21 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"storedProcedureName": "[dbo].[UpdateWatermark]"
+					"storedProcedureName": "[dbo].[UpdateWatermark]",
+					"storedProcedureParameters": {
+						"TableName": {
+							"value": "",
+							"type": "String"
+						},
+						"TableSchema": {
+							"value": "",
+							"type": "String"
+						},
+						"WatermarkColumn": {
+							"value": "",
+							"type": "String"
+						}
+					}
 				},
 				"linkedServiceName": {
 					"referenceName": "DS_SQL_SP",
