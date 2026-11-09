@@ -35,9 +35,12 @@
 			}
 		],
 		"typeProperties": {
-			"schema": "@s",
+			"schema": {
+				"value": "@dataset().SchemaName",
+				"type": "Expression"
+			},
 			"table": {
-				"value": "@dataset().tablename",
+				"value": "@dataset().TableName",
 				"type": "Expression"
 			}
 		}
