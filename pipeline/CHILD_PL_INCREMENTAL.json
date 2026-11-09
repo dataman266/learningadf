@@ -121,7 +121,10 @@
 									"referenceName": "DS_SQL_TABLE_PARQUET",
 									"type": "DatasetReference",
 									"parameters": {
-										"Table_Name": "@pipeline().parameters.TableName​"
+										"Table_Name": {
+											"value": "@pipeline().parameters.TableName",
+											"type": "Expression"
+										}
 									}
 								}
 							]
@@ -140,6 +143,7 @@
 							"policy": {
 								"secureInput": false
 							},
+							"userProperties": [],
 							"typeProperties": {
 								"pipeline": {
 									"referenceName": "CHILD_PL_SP",

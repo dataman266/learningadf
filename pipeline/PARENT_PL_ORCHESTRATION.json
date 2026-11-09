@@ -87,11 +87,6 @@
 				}
 			}
 		],
-		"parameters": {
-			"activity": {
-				"type": "String"
-			}
-		},
 		"annotations": []
 	}
 }
