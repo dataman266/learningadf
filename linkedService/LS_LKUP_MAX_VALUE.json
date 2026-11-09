@@ -6,12 +6,12 @@
 		"type": "SqlServer",
 		"typeProperties": {
 			"server": "localhost\\SQLEXPRESS",
-			"database": "sqlmigration",
+			"database": "migrationproject",
 			"encrypt": "optional",
 			"trustServerCertificate": false,
 			"authenticationType": "SQL",
 			"userName": "visionboard",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJlM2I1Yjc3OS03ZmVmLTRmNDYtYWQ3ZS00NjRhOWEwNTNmMjAiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIzNzI1ZjRkMy04NTNhLTQ0MzgtODM1Ny1kMDBkNDAwNDhjODIiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "integrationRuntime1",
