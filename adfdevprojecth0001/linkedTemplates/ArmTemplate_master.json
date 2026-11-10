@@ -1,0 +1,140 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adfdevprojecth0001"
+		},
+		"SqlServer1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SqlServer1'"
+		},
+		"DS_LKUP_MAX_VALUE_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'DS_LKUP_MAX_VALUE'"
+		},
+		"DS_SQL_TO_ADLS_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'DS_SQL_TO_ADLS'"
+		},
+		"LS_SQLSERVER_TBLLKUP_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_SQLSERVER_TBLLKUP'"
+		},
+		"SqlServer1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost\\SQLEXPRESS"
+		},
+		"SqlServer1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "migrationproject"
+		},
+		"SqlServer1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "visionboard"
+		},
+		"DS_LKUP_MAX_VALUE_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost\\SQLEXPRESS"
+		},
+		"DS_LKUP_MAX_VALUE_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "migrationproject"
+		},
+		"DS_LKUP_MAX_VALUE_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "visionboard"
+		},
+		"DS_SQL_TO_ADLS_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevprojecth0001.dfs.core.windows.net/"
+		},
+		"LS_SQLSERVER_TBLLKUP_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost\\SQLEXPRESS"
+		},
+		"LS_SQLSERVER_TBLLKUP_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "migrationproject"
+		},
+		"LS_SQLSERVER_TBLLKUP_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "visionboard"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "adfdevprojecth0001_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"DS_SQL_TO_ADLS_accountKey": {
+						"value": "[parameters('DS_SQL_TO_ADLS_accountKey')]"
+					},
+					"SqlServer1_password": {
+						"value": "[parameters('SqlServer1_password')]"
+					},
+					"DS_LKUP_MAX_VALUE_password": {
+						"value": "[parameters('DS_LKUP_MAX_VALUE_password')]"
+					},
+					"LS_SQLSERVER_TBLLKUP_password": {
+						"value": "[parameters('LS_SQLSERVER_TBLLKUP_password')]"
+					},
+					"DS_SQL_TO_ADLS_properties_typeProperties_url": {
+						"value": "[parameters('DS_SQL_TO_ADLS_properties_typeProperties_url')]"
+					},
+					"SqlServer1_properties_typeProperties_server": {
+						"value": "[parameters('SqlServer1_properties_typeProperties_server')]"
+					},
+					"SqlServer1_properties_typeProperties_database": {
+						"value": "[parameters('SqlServer1_properties_typeProperties_database')]"
+					},
+					"SqlServer1_properties_typeProperties_userName": {
+						"value": "[parameters('SqlServer1_properties_typeProperties_userName')]"
+					},
+					"DS_LKUP_MAX_VALUE_properties_typeProperties_server": {
+						"value": "[parameters('DS_LKUP_MAX_VALUE_properties_typeProperties_server')]"
+					},
+					"DS_LKUP_MAX_VALUE_properties_typeProperties_database": {
+						"value": "[parameters('DS_LKUP_MAX_VALUE_properties_typeProperties_database')]"
+					},
+					"DS_LKUP_MAX_VALUE_properties_typeProperties_userName": {
+						"value": "[parameters('DS_LKUP_MAX_VALUE_properties_typeProperties_userName')]"
+					},
+					"LS_SQLSERVER_TBLLKUP_properties_typeProperties_server": {
+						"value": "[parameters('LS_SQLSERVER_TBLLKUP_properties_typeProperties_server')]"
+					},
+					"LS_SQLSERVER_TBLLKUP_properties_typeProperties_database": {
+						"value": "[parameters('LS_SQLSERVER_TBLLKUP_properties_typeProperties_database')]"
+					},
+					"LS_SQLSERVER_TBLLKUP_properties_typeProperties_userName": {
+						"value": "[parameters('LS_SQLSERVER_TBLLKUP_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

@@ -1,0 +1,51 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfdevprojecth0001"
+		},
+		"SqlServer1_password": {
+			"value": ""
+		},
+		"DS_LKUP_MAX_VALUE_password": {
+			"value": ""
+		},
+		"DS_SQL_TO_ADLS_accountKey": {
+			"value": ""
+		},
+		"LS_SQLSERVER_TBLLKUP_password": {
+			"value": ""
+		},
+		"SqlServer1_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"SqlServer1_properties_typeProperties_database": {
+			"value": "migrationproject"
+		},
+		"SqlServer1_properties_typeProperties_userName": {
+			"value": "visionboard"
+		},
+		"DS_LKUP_MAX_VALUE_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"DS_LKUP_MAX_VALUE_properties_typeProperties_database": {
+			"value": "migrationproject"
+		},
+		"DS_LKUP_MAX_VALUE_properties_typeProperties_userName": {
+			"value": "visionboard"
+		},
+		"DS_SQL_TO_ADLS_properties_typeProperties_url": {
+			"value": "https://adlsdevprojecth0001.dfs.core.windows.net/"
+		},
+		"LS_SQLSERVER_TBLLKUP_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"LS_SQLSERVER_TBLLKUP_properties_typeProperties_database": {
+			"value": "migrationproject"
+		},
+		"LS_SQLSERVER_TBLLKUP_properties_typeProperties_userName": {
+			"value": "visionboard"
+		}
+	}
+}
