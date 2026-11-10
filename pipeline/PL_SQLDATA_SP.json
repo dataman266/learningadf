@@ -17,16 +17,25 @@
 				"typeProperties": {
 					"storedProcedureName": "[dbo].[insertCustomer]",
 					"storedProcedureParameters": {
-						"CustomerID": {
-							"value": "1",
-							"type": "Int32"
-						},
-						"FirstName": {
-							"value": "Alex",
+						"TableName": {
+							"value": {
+								"value": "@pipeline().parameters.TableName",
+								"type": "Expression"
+							},
 							"type": "String"
 						},
-						"LastName": {
-							"value": "John",
+						"TableSchema": {
+							"value": {
+								"value": "@pipeline().parameters.TableSchema",
+								"type": "Expression"
+							},
+							"type": "String"
+						},
+						"WatermarkColumn": {
+							"value": {
+								"value": "@pipeline().parameters.WatermarkColumn",
+								"type": "Expression"
+							},
 							"type": "String"
 						}
 					}
@@ -37,6 +46,17 @@
 				}
 			}
 		],
+		"parameters": {
+			"TableName": {
+				"type": "string"
+			},
+			"TableSchema": {
+				"type": "string"
+			},
+			"WatermarkColumn": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"lastPublishTime": "2026-11-03T04:47:42Z"
 	},
